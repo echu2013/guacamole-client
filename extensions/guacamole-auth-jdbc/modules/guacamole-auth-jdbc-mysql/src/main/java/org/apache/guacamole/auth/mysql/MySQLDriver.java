@@ -17,26 +17,21 @@
  * under the License.
  */
 
-package org.apache.guacamole.auth.mysql.conf;
+package org.apache.guacamole.auth.mysql;
 
 /**
- * Possible values for enabling SSL within the MySQL Driver.
+ * The possible JDBC drivers to use when talking to a MySQL-compatible database
+ * server.
  */
-public enum MySQLSSLMode {
-    
-    // Disable SSL altogether.
-    DISABLED,
-    
-    // Prefer SSL, but fall-back to non-SSL.
-    PREFERRED,
-    
-    // Require SSL, but perform no verification.
-    REQUIRED,
-    
-    // Require SSL and verify a valid authority.
-    VERIFY_CA,
-    
-    // Require SSL and verify a valid authority and server certificate.
-    VERIFY_IDENTITY;
-    
+public enum MySQLDriver {
+
+    /**
+     * MySQL driver.
+     */
+    MYSQL,
+
+    /**
+     * MariaDB driver.
+     */
+    MARIADB;
 }

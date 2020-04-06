@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package org.apache.guacamole.auth.mysql.conf;
+package org.apache.guacamole.auth.mysql;
 
 import org.apache.guacamole.GuacamoleException;
 import org.apache.guacamole.GuacamoleServerException;

@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package org.apache.guacamole.auth.mysql.conf;
+package org.apache.guacamole.auth.mysql;
 
 import com.google.common.collect.ComparisonChain;
 import java.util.regex.Matcher;
