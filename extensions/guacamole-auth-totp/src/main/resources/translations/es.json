@@ -1,0 +1,36 @@
+{
+
+    "TOTP" : {
+
+        "ACTION_HIDE_DETAILS" : "Ocultar",
+        "ACTION_SHOW_DETAILS" : "Mostrar",
+
+        "FIELD_HEADER_ALGORITHM"  : "Algoritmo:",
+        "FIELD_HEADER_DIGITS"     : "Dígitos:",
+        "FIELD_HEADER_INTERVAL"   : "Intervalo:",
+        "FIELD_HEADER_SECRET_KEY" : "Clave Secreta:",
+
+        "FIELD_PLACEHOLDER_CODE" : "Código de Autenticación",
+
+        "INFO_CODE_REQUIRED"       : "Porfavor ingrese su código de autenticación para validar su identidad.",
+        "INFO_ENROLL_REQUIRED"     : "La autenticación de Multi-factor  ha sido habilitada para su cuenta.",
+        "INFO_VERIFICATION_FAILED" : "Falló la verificación. Porfavor vuelva a intentarlo nuevamente.",
+
+        "HELP_ENROLL_BARCODE" : "Para completar el proceso de enrolado, escanee el código QR a continuación con la aplicación de doble factor en su teléfono o dispositivo.",
+        "HELP_ENROLL_VERIFY"  : "Después de haber escaneado el código QR, ingrese los {DIGITS}-dígitos del código de autenticación mostrados en su dispositivo para verificar que el proceso de enrolado fué existoso.",
+
+        "SECTION_HEADER_DETAILS" : "Detalles:"
+
+    },
+    
+    "USER_ATTRIBUTES" : {
+        
+        "FIELD_HEADER_GUAC_TOTP_RESET"         : "Reestablecer clave TOTP:",
+        "FIELD_HEADER_GUAC_TOTP_KEY_CONFIRMED" : "Clave TOTP confirmada:",
+        
+        "SECTION_HEADER_TOTP_CONFIG_FORM" : "Configuación TOTP"
+        
+    }
+
+
+}
