@@ -29,19 +29,22 @@
     font-family: 'Carlito';
     font-weight: normal;
     font-style: normal;
-    src: url('fonts/carlito/Carlito-Regular.woff') format('woff');
+    src: local('Carlito'), url('fonts/carlito/Carlito-Regular.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Carlito';
     font-weight: bold;
     font-style: normal;
-    src: url('fonts/carlito/Carlito-Bold.woff') format('woff');
+    src: local('Carlito Bold'), url('fonts/carlito/Carlito-Bold.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Carlito';
     font-weight: normal;
     font-style: italic;
-    src: url('fonts/carlito/Carlito-Italic.woff') format('woff');
+    src: local('Carlito Italic'), url('fonts/carlito/Carlito-Italic.woff') format('woff');
+    font-display: swap;
 }
