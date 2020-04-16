@@ -94,6 +94,20 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
     var DEL_KEY = 0xFFFF;
 
     /**
+     * Keysym for sending the TAB key when the Alt-Q hotkey
+     * combo is pressed.
+     *
+     * @type Number
+     */
+    var TAB_KEY = 0xFF09;
+
+    /**
+     * Keysym for detecting any Alt-Q key presses, for the purpose of passing through
+     * the Alt-TAB sequence to a remote system.
+     */
+    var Q_KEYS = {0x0051 : true, 0x0071 : true};
+
+    /**
      * All client error codes handled and passed off for translation. Any error
      * code not present in this list will be represented by the "DEFAULT"
      * translation.
@@ -661,6 +675,25 @@ angular.module('client').controller('clientController', ['$scope', '$routeParams
 
             // Send through the delete key.
             $scope.$broadcast('guacSyntheticKeydown', DEL_KEY);
+        }
+
+        // If one of the Alt-Q keys is pressed, send Alt-TAB.
+        if (Q_KEYS[keysym] &&
+            !_.isEmpty(_.pick(ALT_KEYS, currentKeysPressedKeys))
+        ) {
+
+            // Don't send this event through to the client.
+            event.preventDefault();
+
+            // Remove the original key press
+            delete keysCurrentlyPressed[keysym];
+
+            // Record the substituted key press so that it can be
+            // properly dealt with later.
+            substituteKeysPressed[keysym] = TAB_KEY;
+
+            // Send through the TAB key.
+            $scope.$broadcast('guacSyntheticKeydown', TAB_KEY);
         }
 
     });
